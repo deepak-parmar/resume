@@ -1,0 +1,132 @@
+body {
+    margin: auto;
+    background-color: rebeccapurple;
+    color: #202020;
+    // margin: 5rem 10rem;
+    margin: 1rem 12rem;
+    font-family: 'Roboto';
+}
+
+a {
+    text-decoration: none;
+    &:hover {color: hsl(270, 54%, 25%);}
+    color: rebeccapurple;
+}
+
+
+@for $var from 1 to 6 {
+    h#{$var} {margin: 0; padding: 0;}
+}
+
+ul {
+    padding-left: 0;
+    margin-top: 0;
+    list-style: none;
+
+    li {padding-top: 1rem;}
+}
+
+header {
+    padding: 1.5rem;
+    border-radius: .2rem;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    img {
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+    .intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #name {
+            font-family: 'Playfair Display';
+            font-weight: 800;
+        }
+    
+        #occupation {
+            font-family: 'Roboto';
+            font-weight: 400;
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.3rem;
+
+        .contact-link {
+            padding: 1rem;
+            line-height: 0;
+            align-self: center;
+            vertical-align: middle;
+
+            &:hover {
+                color: #202020;
+            }
+
+            span {
+                display: none;
+                font-family: 'Roboto', sans-serif;
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+main, footer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 1rem;
+
+    section {
+        background-color: lightgray;
+        padding: 1.5rem;
+        border-radius: .2rem;
+        margin-bottom: 1rem;
+
+            table {
+                width: 100%;
+                margin-top: 1rem;
+                text-align: left;
+                border: none;
+
+                th {color: #404040;}
+                th, td {padding: .5rem; padding-left: 0;}
+            }
+
+            h3 {
+                i {line-height: 0 !important;}
+                font-family: 'Playfair Display';
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+
+        p {
+            font-family: 'Roboto';
+            line-height: 1.5;
+            margin: 1rem 0 0 0;
+        }
+
+        .place, .college {font-size: .95rem;}
+
+        .job {
+            a {
+                i {visibility: hidden;}
+                &:hover {i {visibility: visible;}}
+            }
+
+            .course, .role {
+                font-size: 1.1rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}
